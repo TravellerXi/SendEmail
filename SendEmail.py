@@ -14,13 +14,14 @@ mail_pass = 'passwordHere'
 
 
 def send_mail(to_list, subject, content):
-    me = "zabbix 监控告警平台" + "<" + mail_user + ">"
+    me = "EmailTitleHere" + "<" + mail_user + ">"
     msg = MIMEText(content, 'plain', 'utf-8')
     msg['Subject'] = subject
     msg['From'] = me
     msg['to'] = to_list
     try:
         s = smtplib.SMTP_SSL("smtp.exmail.qq.com", 465)
+        #smtp地址以及端口号/SMTP address and port
         s.login(mail_user, mail_pass)
         s.sendmail(me, to_list, msg.as_string())
         s.close()
