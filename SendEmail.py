@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+#author:admin@mytlu.cn
 # coding:utf-8
 
 import smtplib
